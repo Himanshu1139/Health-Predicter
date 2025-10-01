@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog - Health Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: #000;
+          color: #f0f0f0;
+      }
+      .navbar {
+          background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+          box-shadow: 0 4px 12px rgba(0,255,255,0.5);
+      }
+      .navbar-brand {
+          font-weight: bold;
+          font-size: 1.5rem;
+          letter-spacing: 1px;
+          color: #0ff !important;
+          text-shadow: 0 0 10px #0ff;
+      }
+      .navbar-nav .nav-link {
+          color: #fff !important;
+          font-weight: 500;
+          margin-right: 15px;
+          transition: 0.3s;
+      }
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+          color: #0ff !important;
+          text-shadow: 0 0 10px #0ff;
+      }
+      .logo img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid #0ff;
+          box-shadow: 0 0 15px #0ff;
+      }
+      h1 {
+          text-align: center;
+          color: #0ff;
+          text-shadow: 0 0 20px #0ff, 0 0 30px #00f;
+          margin-top: 30px;
+      }
+      .blog-container {
+          max-width: 900px;
+          margin: 40px auto;
+      }
+      .blog-card {
+          background: #111;
+          border-radius: 15px;
+          padding: 25px;
+          margin-bottom: 30px;
+          box-shadow: 0 0 25px rgba(0,255,255,0.3);
+          transition: 0.3s;
+      }
+      .blog-card:hover {
+          transform: scale(1.02);
+          box-shadow: 0 0 30px rgba(0,255,255,0.5);
+      }
+      .blog-card h3 {
+          color: #0ff;
+          margin-bottom: 15px;
+          text-shadow: 0 0 10px #0ff;
+      }
+      .blog-card p {
+          color: #fff;
+      }
+      .blog-date {
+          font-size: 0.9rem;
+          color: #0f0;
+          text-shadow: 0 0 5px #0f0;
+      }
+      .read-more {
+          color: #ff0;
+          font-weight: bold;
+          text-decoration: none;
+          transition: 0.3s;
+      }
+      .read-more:hover {
+          color: #0ff;
+          text-shadow: 0 0 10px #0ff;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo">
+      </div>
+      <a class="navbar-brand ms-3" href="/index">Health Care</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/index"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about"><i class="fa-solid fa-info-circle"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="/developer"><i class="fa-solid fa-user-cog"></i> Developer</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/blog"><i class="fa-solid fa-blog"></i> Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Title -->
+  <h1>Health Care Blog</h1>
+
+  <!-- Blog Container -->
+  <div class="blog-container">
+
+    <!-- Blog Card Example -->
+    <div class="blog-card">
+      <h3>Understanding Common Skin Diseases</h3>
+      <div class="blog-date">September 30, 2025</div>
+      <p>Skin diseases can affect anyone. In this blog, we discuss symptoms, causes, and how to manage common skin problems with care.</p>
+      <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="blog-card">
+      <h3>Healthy Diet for a Strong Immune System</h3>
+      <div class="blog-date">September 28, 2025</div>
+      <p>Nutrition plays a vital role in immunity. Discover the top foods and habits that can strengthen your immune system naturally.</p>
+      <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="blog-card">
+      <h3>Importance of Regular Exercise</h3>
+      <div class="blog-date">September 25, 2025</div>
+      <p>Physical activity is essential for overall health. Learn how simple workouts can improve both physical and mental well-being.</p>
+      <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

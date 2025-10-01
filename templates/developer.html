@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Developer - Health Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: #000;
+          color: #f0f0f0;
+      }
+      .navbar {
+          background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+          box-shadow: 0 4px 12px rgba(0,255,255,0.5);
+      }
+      .navbar-brand {
+          font-weight: bold;
+          font-size: 1.5rem;
+          letter-spacing: 1px;
+          color: #0ff !important;
+          text-shadow: 0 0 10px #0ff;
+      }
+      .navbar-nav .nav-link {
+          color: #fff !important;
+          font-weight: 500;
+          margin-right: 15px;
+          transition: 0.3s;
+      }
+      .navbar-nav .nav-link:hover {
+          color: #0ff !important;
+          text-shadow: 0 0 10px #0ff;
+      }
+      .logo img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid #0ff;
+          box-shadow: 0 0 15px #0ff;
+      }
+      h1, h2 {
+          text-align: center;
+          color: #0ff;
+          text-shadow: 0 0 20px #0ff, 0 0 30px #00f;
+      }
+      .card-section {
+          background: #111;
+          border-radius: 15px;
+          padding: 30px;
+          max-width: 800px;
+          margin: 40px auto;
+          box-shadow: 0 0 25px rgba(0,255,255,0.3);
+      }
+      .section-title {
+          font-weight: bold;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          color: #0ff;
+          text-shadow: 0 0 10px #0ff;
+      }
+      .section-title i {
+          margin-right: 10px;
+      }
+      .social-icons a {
+          color: #0ff;
+          font-size: 1.5rem;
+          margin-right: 15px;
+          transition: 0.3s;
+      }
+      .social-icons a:hover {
+          color: #f0f;
+          transform: scale(1.2);
+      }
+      p {
+          color: #fff;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="{{url_for('static', filename='logo.jpg')}}" alt="Logo">
+      </div>
+      <a class="navbar-brand ms-3" href="/index">Health Care</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/index"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about"><i class="fa-solid fa-info-circle"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/developer"><i class="fa-solid fa-user-cog"></i> Developer</a></li>
+          <li class="nav-item"><a class="nav-link" href="/blog"><i class="fa-solid fa-blog"></i> Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Title -->
+  <h1>Meet the Developer</h1>
+
+  <!-- Developer Info -->
+  <div class="card-section text-center">
+    <div class="mb-3">
+      <img src="{{url_for('static', filename='developer.jpg')}}" alt="Developer" class="rounded-circle" style="width:150px; height:150px; border:2px solid #0ff; box-shadow:0 0 20px #0ff;">
+    </div>
+    <h2>Himanshu Agarwal</h2>
+    <p>Full Stack Developer | Python & Flask Enthusiast | Health Tech Innovator</p>
+
+    <!-- Skills -->
+    <div class="section-title mt-4"><i class="fa-solid fa-laptop-code"></i> Skills</div>
+    <p>Python, Flask, HTML, CSS, JavaScript, Bootstrap, Machine Learning, Data Analytics</p>
+
+    <!-- Social Links -->
+    <div class="section-title mt-4"><i class="fa-solid fa-share-nodes"></i> Connect with Me</div>
+    <div class="social-icons">
+      <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/username" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:himanshu@example.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
